@@ -16,9 +16,9 @@ export default defineConfig({
   },
 
   server: {
-    port: 5175, // Asosiy port
+    port: 5175, 
     strictPort: false,
-    allowedHosts: ['b3da-213-230-97-96.ngrok-free.app']
+    allowedHosts: ['b0eb-213-230-97-96.ngrok-free.app']
   }
 })
 

@@ -42,12 +42,14 @@ const SwiperCarousel: React.FC = () => {
           navigation
           pagination={{ clickable: true }}
           loop={true}
-          className="pb-10"
-          autoplay={{ delay: 2000, disableOnInteraction: true }}
+          speed={1500}
+          className="pb-10 smooth-transition"
+          autoplay={{ delay: 1000, disableOnInteraction: true }}
+   
         >
           {data.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white w-[320px] h-[280px] flex flex-col justify-evenly p-6 shadow-lg text-center rounded-lg">
+              <div className="bg-white w-[320px] h-[280px] flex flex-col justify-evenly p-6 shadow-lg text-center">
                 {/* Logo */}
                 <div className="flex justify-center mb-4">
                  <a href={item.website}> <img
