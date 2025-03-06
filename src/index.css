@@ -6,7 +6,7 @@
 .nav-link {
     position: relative;
     text-decoration: none;
-    color: #3b82f6;
+    color: #ffffff;
 }
 
 .nav-link::after {
@@ -16,9 +16,14 @@
     bottom: -2px;
     width: 0;
     height: 2px;
-    background-color: #3b82f6;
+    background-color:#1E9FD9;
     transition: width 0.3s ease-in-out;
 }
+
+.nav-link:hover{
+    color:#1E9FD9
+}
+
 
 .nav-link:hover::after,
 .nav-link.active::after {

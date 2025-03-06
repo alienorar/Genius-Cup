@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom"; // useLocation ni import qiling
 import MainLogo from "../../assets/logo2.png";
 import { FiMenu, FiX } from "react-icons/fi";
+import { FaTelegram } from "react-icons/fa6";
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -19,15 +20,19 @@ const Header = () => {
     return (
         <div className="absolute z-40 w-full">
 
-            <nav className="navbar h-[60px] bg-[#1E9FD9] w-full flex justify-center items-center">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </nav>
+<nav className="navbar h-[60px] bg-[#1E9FD9] w-full flex justify-center items-center gap-4 text-white font-semibold">
+      <a href="https://t.me/Genius_cup_bot" className="uppercase">Ro'yxatdan o'tish:</a>
+      <a href="https://t.me/Genius_cup_bot" target="_blank" rel="noopener noreferrer">
+        <FaTelegram className="w-6 h-6 hover:text-gray-200 transition duration-300" />
+      </a>
+     
+    </nav>
             <nav className="sticky custom-container flex items-center bg-transparent  justify-between py-4">
 
                 <a href="/">
                     <img src={MainLogo} alt="mainLogo" />
                 </a>
-                <ul className="hidden md:flex gap-6 text-blue-500 font-semibold text-md">
+                <ul className="hidden md:flex gap-6 text-white font-semibold text-md">
                     {navLinks.map((link) => (
                         <li key={link.name}>
                             <Link
@@ -40,7 +45,7 @@ const Header = () => {
                     ))}
                 </ul>
                 <button
-                    className="md:hidden text-blue-400"
+                    className="md:hidden text-white"
                     onClick={() => setMenuOpen(true)}
                 >
                     <FiMenu size={30} />

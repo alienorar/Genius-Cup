@@ -1,4 +1,4 @@
-import Banner from "../../assets/banner.png";
+import Banner from "../../assets/openart-image_4mVinqhU_1741160713603_raw.jpg";
 import FirstCard from "../../assets/iq-st.png"
 import SecondCard from "../../assets/iq-nd.png"
 import ThirdCard from "../../assets/iq-rd.jpg"
@@ -47,31 +47,40 @@ const Index = () => {
             <section
             >
                 <div className="relative">
-                    <img src={Banner} alt="banner image" className="w-full h-auto" />
-                    <div className="absolute inset-0 flex items-center justify-center bg-gray backdrop-blur-xs ">
-                        <h1 className="text-4xl md:text-6xl lg:text-9xl  text-[#1E9FD9] text-center title-1">
+                    <img src={Banner} alt="banner image" className="w-full h-[840px] object-cover bg-top" />
+                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray backdrop-blur-xs pt-[400px] ">
+                        <h1 className="text-[369px]  font-normal md:text-6xl lg:text-9xl  text-[#1E9FD9] text-center title-1">
                             Genius Cup
                         </h1>
+
+                        <p
+  className="text-white italic font-normal underline text-center text-[29px] py-4"
+  style={{
+    textShadow: "5px 5px 9px rgba(0, 0, 0, 0.7), 3px 3px 5px rgba(0, 0, 0, 0.7)",
+  }}
+>
+  Aql va zakovat sinovidan o‘tib, kelajak yetakchilariga aylaning!
+</p>
+
 
 
                     </div>
                 </div>
             </section>
-
-            <section className="p-6  grid grid-cols-1 lg:grid-cols-2 custom-container mt-4 items-center justify-center gap-4 ">
+            <section className="p-6  grid grid-cols-1 lg:grid-cols-2 custom-container lg:mt-[100px] items-center justify-center gap-4 ">
                 <div className="w-full">
-                    <div className="text-center md:text-left flex flex-col gap-2 w-full">
+                    <div className="text-center  md:text-left flex  flex-col items-start justify-start gap-5 w-full">
                         <a
                             href="#"
-                            className="text-base sm:text-lg text-[#1E9FD9] py-1 underline font-semibold uppercase"
+                            className="text-base sm:text-lg text-[#1E9FD9] py-1 underline font-semibold  uppercase"
                         >
                             Aql-idrokingizni sinovdan o‘tkazing
                         </a>
-                        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">
+                        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 lg:w-[500px]">
                             <span className="text-[#1E9FD9]">IQ</span> – fikrlash va muammolarni hal qilish qobiliyatingiz{" "}
                             <span className="text-[#1E9FD9]">o‘lchovi</span>.
                         </h1>
-                        <p className="mt-4 text-sm sm:text-base md:text-lg text-gray-700">
+                        <p className=" text-sm sm:text-base md:text-lg text-gray-700 lg:w-[480px]">
                             IQ darajangiz – bu sizning fikrlash tezligingiz, muammolarni hal qilish qobiliyatingiz va
                             intellektual salohiyatingizning kaliti. O‘z imkoniyatlaringizni kashf eting, yangi bilimlar bilan
                             ongingizni charxlang va har kuni o‘zingizning eng yaxshi versiyangiz bo‘lishga intiling! Aql-u
@@ -81,16 +90,15 @@ const Index = () => {
                 </div>
                 <div className="w-full flex flex-col gap-4 justify-center items-center ">
                     <div className="grid lg:grid-cols-2 md:grid-cols-2 gap-4 items-end ">
-                        <img src={FirstCard} alt="First Card" className="w-[271px] h-[290px]" />
-                        <img src={SecondCard} alt="Second Card" className="h-[210px] w-[271px] " />
+                        <img src={FirstCard} alt="First Card" className="w-[271px] h-[290px] object-cover" />
+                        <img src={SecondCard} alt="Second Card" className="h-[210px] w-[271px]  object-cover" />
                     </div>
-                    <div className="grid lg:grid-cols-2 md:grid-cols-2 items-start gap-4"><img src={ThirdCard} alt="Second Card" className="h-[210px] w-[271px]" />
-                        <img src={FourthCard} alt="First Card" className="w-[271px] h-[290px] " /></div>
+                    <div className="grid lg:grid-cols-2 md:grid-cols-2 items-start gap-4"><img src={ThirdCard} alt="Second Card" className="h-[210px] w-[271px] object-cover" />
+                        <img src={FourthCard} alt="First Card" className="w-[271px] h-[290px] object-cover " /></div>
                 </div>
             </section>
 
             <section className="custom-container  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center py-10">
-
                 {IqLevel.map((item) => (
                     <div
                         key={item.title}
@@ -124,7 +132,7 @@ const Index = () => {
                             <div
                                 key={item.title}
                                 className={`flex flex-col md:flex-row ${item.flex === "row-reverse" ? "md:flex-row-reverse" : ""} 
-        bg-white shadow-lg rounded-lg overflow-hidden`}
+                                bg-white shadow-lg rounded-lg overflow-hidden`}
                             >
 
                                 <div className="w-full md:w-1/2">
@@ -171,23 +179,23 @@ const Index = () => {
             </section>
 
             <section className=" px-4 py-16 lg:py-24 bg-gray-100">
-          
 
-  <div className="flex flex-col lg:flex-row items-center justify-between custom-container">
-    {/* Text Content */}
-    <div className="text-center lg:text-start mb-10 mt-10 lg:mb-16 organizers">
-      <h2 className="text-3xl font-bold font-sans  sm:text-4xl  text-gray-700 leading-tight">
-      TASHKILOTCHILAR
-      </h2>
-      <p className="mt-3 text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
-      Biz sizning kelajingiz uchun qo'l uzatdik , siz buni javobsiz qoldirmaysiz degan umiddamiz! 
-      </p>
-    </div>
 
-    {/* Swiper Carousel */}
-    <SwiperCarousel />
-  </div>
-</section>
+                <div className="flex flex-col lg:flex-row items-center justify-between custom-container">
+                    {/* Text Content */}
+                    <div className="text-center lg:text-start mb-10 mt-10 lg:mb-16 organizers">
+                        <h2 className="text-3xl font-bold font-sans  sm:text-4xl  text-gray-700 leading-tight">
+                            TASHKILOTCHILAR
+                        </h2>
+                        <p className="mt-3 text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+                            Biz sizning kelajingiz uchun qo'l uzatdik , siz buni javobsiz qoldirmaysiz degan umiddamiz!
+                        </p>
+                    </div>
+
+                    {/* Swiper Carousel */}
+                    <SwiperCarousel />
+                </div>
+            </section>
 
 
         </main>

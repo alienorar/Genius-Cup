@@ -38,7 +38,7 @@ const SwiperCarousel: React.FC = () => {
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={20}
           slidesPerView={2}
-          centeredSlides={true}
+         
           navigation
           pagination={{ clickable: true }}
           loop={true}
