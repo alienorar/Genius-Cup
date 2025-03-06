@@ -1,0 +1,95 @@
+@import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+/* Header.css */
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    color: #3b82f6;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #3b82f6;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Custom Container */
+.custom-container {
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Responsive Padding */
+@media (min-width: 640px) {
+    .custom-container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .custom-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+.title-1 {
+    font-family: "Early Bird", cursive;
+}
+.icon-container {
+    font-size: 4.5rem; /* Ikonka o‘lchami */
+    transition: transform 0.5s ease-in-out, transform 0.3s ease-in-out;
+    color:rgba(22, 19, 19, 0.685);
+    
+}
+
+.icon-container:hover {
+    transform: rotateY(360deg) translateY(-5px);
+}
+
+.events{
+    background-image: url("./assets/events-bg.png");
+
+}
+
+#middle{
+    border-left:1px dashed #4f50526e;
+    border-right:1px dashed #4f50526e;
+}
+
+/* Style both prev and next buttons */
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: black !important; /* Black background */
+  width: 40px; /* Adjust size */
+  height: 40px;
+  border-radius: 50%; /* Make it circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style the arrows inside the buttons */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: white !important; /* White arrow */
+  font-size: 16px; /* Adjust arrow size */
+}
+
