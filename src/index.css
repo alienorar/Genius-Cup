@@ -2,11 +2,28 @@
 @import "swiper/css";
 @import "swiper/css/navigation";
 @import "swiper/css/pagination";
+
+@font-face {
+    font-family: 'Rubik italic';
+    src: url('/Rubik/static/Rubik-Italic.ttf')
+  }
+@font-face {
+    font-family: 'Rubik static';
+    src: url('/Rubik/Rubik-VariableFont_wght.ttf')
+  }
+  
+ *{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
 /* Header.css */
 .nav-link {
     position: relative;
     text-decoration: none;
     color: #ffffff;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:600;
+    font-size: 17px;
 }
 
 .nav-link::after {
@@ -69,10 +86,7 @@
     transform: rotateY(360deg) translateY(-5px);
 }
 
-.events{
-    background-image: url("./assets/events-bg.png");
 
-}
 
 #middle{
     border-left:1px dashed #4f50526e;
@@ -96,5 +110,11 @@
 .swiper-button-next::after {
   color: white !important; /* White arrow */
   font-size: 16px; /* Adjust arrow size */
-}
 
+}
+.banner-desc{
+    font-family: "Rubik italic";
+}
+.test-title{
+  font-family:"Rubik static";
+}

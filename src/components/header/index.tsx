@@ -20,14 +20,14 @@ const Header = () => {
     return (
         <div className="absolute z-40 w-full">
 
-<nav className="navbar h-[60px] bg-[#1E9FD9] w-full flex justify-center items-center gap-4 text-white font-semibold">
+<nav className="navbar h-[60px] bg-[#1E9FD9] w-full flex justify-center items-center gap-4 text-white font-bold">
       <a href="https://t.me/Genius_cup_bot" className="uppercase">Ro'yxatdan o'tish:</a>
       <a href="https://t.me/Genius_cup_bot" target="_blank" rel="noopener noreferrer">
         <FaTelegram className="w-6 h-6 hover:text-gray-200 transition duration-300" />
       </a>
      
     </nav>
-            <nav className="sticky custom-container flex items-center bg-transparent  justify-between py-4">
+            <nav className="sticky custom-container flex items-center bg-transparent pt-[70px] justify-between py-4">
 
                 <a href="/">
                     <img src={MainLogo} alt="mainLogo" />

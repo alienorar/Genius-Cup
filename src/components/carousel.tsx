@@ -66,9 +66,9 @@ const SwiperCarousel: React.FC = () => {
                   href={item.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative inline-block w-full py-2 text-green-600 font-bold border-2 border-green-600 rounded-full overflow-hidden transition-all duration-300 group"
+                  className="relative inline-block w-full py-2 text-[#1E9FD9] font-bold border-2 border-[#1E9FD9] rounded-full overflow-hidden transition-all duration-300 group"
                 >
-                  <span className="absolute inset-0 bg-green-600 scale-0 rounded-lg origin-center transition-transform duration-300 group-hover:scale-100"></span>
+                  <span className="absolute inset-0 bg-[#1E9FD9] scale-0 rounded-lg origin-center transition-transform duration-300 group-hover:scale-100"></span>
                   <span className="relative z-10 group-hover:text-white">Rasmiy Sahifamiz</span>
                 </a>
               </div>

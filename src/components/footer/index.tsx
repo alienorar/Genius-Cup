@@ -40,7 +40,7 @@ export default function Footer() {
         </div>
 
         {/* Right Section (Newsletter) */}
-        <div className="bg-green-500 p-6 rounded-lg text-black relative">
+        <div className="bg-[#1E9FD9] p-6 rounded-lg text-black relative">
           <p className="font-semibold">
             Subscribe to our mailing list to get the <span className="font-bold">update to your email.</span>
           </p>
@@ -52,7 +52,7 @@ export default function Footer() {
 
       {/* Copyright */}
       <div className="text-center text-gray-400 text-sm mt-8">
-        &copy; Copyright 2019 <span className="text-green-500">Povert</span>. All rights reserved.
+        &copy; Copyright 2019 <span className="text-[#1E9FD9]">Povert</span>. All rights reserved.
       </div>
     </footer>
   );
