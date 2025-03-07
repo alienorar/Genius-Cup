@@ -6,23 +6,24 @@
 @font-face {
     font-family: 'Rubik italic';
     src: url('/Rubik/static/Rubik-Italic.ttf')
-  }
+}
+
 @font-face {
     font-family: 'Rubik static';
     src: url('/Rubik/Rubik-VariableFont_wght.ttf')
-  }
-  
- *{
+}
+
+* {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- }
+}
 
 /* Header.css */
 .nav-link {
     position: relative;
     text-decoration: none;
     color: #ffffff;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight:600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
     font-size: 17px;
 }
 
@@ -33,12 +34,12 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     bottom: -2px;
     width: 0;
     height: 2px;
-    background-color:#1E9FD9;
+    background-color: #1E9FD9;
     transition: width 0.3s ease-in-out;
 }
 
-.nav-link:hover{
-    color:#1E9FD9
+.nav-link:hover {
+    color: #1E9FD9
 }
 
 
@@ -75,11 +76,13 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 .title-1 {
     font-family: "Early Bird", cursive;
 }
+
 .icon-container {
-    font-size: 4.5rem; /* Ikonka o‘lchami */
+    font-size: 4.5rem;
+    /* Ikonka o‘lchami */
     transition: transform 0.5s ease-in-out, transform 0.3s ease-in-out;
-    color:rgba(22, 19, 19, 0.685);
-    
+    color: rgba(22, 19, 19, 0.685);
+
 }
 
 .icon-container:hover {
@@ -88,33 +91,40 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 
 
-#middle{
-    border-left:1px dashed #4f50526e;
-    border-right:1px dashed #4f50526e;
+#middle {
+    border-left: 1px dashed #4f50526e;
+    border-right: 1px dashed #4f50526e;
 }
 
 /* Style both prev and next buttons */
 .swiper-button-prev,
 .swiper-button-next {
-  background-color: black !important; /* Black background */
-  width: 40px; /* Adjust size */
-  height: 40px;
-  border-radius: 50%; /* Make it circular */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    background-color: black !important;
+    /* Black background */
+    width: 40px;
+    /* Adjust size */
+    height: 40px;
+    border-radius: 50%;
+    /* Make it circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Style the arrows inside the buttons */
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  color: white !important; /* White arrow */
-  font-size: 16px; /* Adjust arrow size */
+    color: white !important;
+    /* White arrow */
+    font-size: 16px;
+    /* Adjust arrow size */
 
 }
-.banner-desc{
+
+.banner-desc {
     font-family: "Rubik italic";
 }
-.test-title{
-  font-family:"Rubik static";
+
+.test-title {
+    font-family: "Rubik static";
 }

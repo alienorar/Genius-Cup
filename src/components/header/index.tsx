@@ -27,12 +27,12 @@ const Header = () => {
       </a>
      
     </nav>
-            <nav className="sticky custom-container flex items-center bg-transparent pt-[70px] justify-between py-4">
+            <nav className="sticky custom-container flex items-center bg-transparent pt-[60px] justify-between py-4">
 
                 <a href="/">
                     <img src={MainLogo} alt="mainLogo" />
                 </a>
-                <ul className="hidden md:flex gap-6 text-white font-semibold text-md">
+                <ul className="hidden md:flex gap-[40px] text-white font-semibold text-md">
                     {navLinks.map((link) => (
                         <li key={link.name}>
                             <Link

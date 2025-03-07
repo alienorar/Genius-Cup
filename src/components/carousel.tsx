@@ -38,14 +38,14 @@ const SwiperCarousel: React.FC = () => {
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={20}
           slidesPerView={2}
-         
           navigation
           pagination={{ clickable: true }}
           loop={true}
           speed={1500}
           className="pb-10 smooth-transition"
           autoplay={{ delay: 1000, disableOnInteraction: true }}
-   
+
+       
         >
           {data.map((item, index) => (
             <SwiperSlide key={index}>
@@ -60,7 +60,7 @@ const SwiperCarousel: React.FC = () => {
                 </div>
                 
                 {/* Tashkilot nomi */}
-                <h3 className="text-lg font-bold text-gray-900">{item.organizer}</h3>
+                <h3 className="text-lg font-bold text-[#333] ">{item.organizer}</h3>
 
                 <a
                   href={item.website}

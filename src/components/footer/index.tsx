@@ -1,14 +1,13 @@
 import { MapPin, Phone } from "lucide-react";
-
+import MainLogo from "../../assets/logo2.png"
 export default function Footer() {
   return (
     <footer className="bg-black text-white py-10 px-6 md:px-20">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
         {/* Left Section */}
-        <div>
+        <div className="flex flex-col gap-5 justify-evenly">
           <div className="flex items-center gap-2">
-            <img src="/logo.svg" alt="Povert Logo" className="w-10 h-10" />
-            <h2 className="text-xl font-bold">Povert</h2>
+            <img src={MainLogo} alt="Povert Logo" />
           </div>
           <p className="text-gray-400 mt-2 text-sm">
             Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic, or web designs.
