@@ -55,6 +55,7 @@ const Index = () => {
         <div className="relative">
           <img
             src={Banner}
+
             alt="banner image"
             className="w-full h-[780px] object-cover bg-top"
           />
@@ -156,87 +157,81 @@ const Index = () => {
           ))}
         </div>
       </section>
-
-
-
       <section className="events">
-      <div className="inset-1.5 bg-white/70 backdrop-blur-xs text-center py-10">
-        <h2 className="lg:text-[45px] sm:text-3xl font-bold text-[#333]">
-          Musobaqa bosqichlari
-        </h2>
-        <p className="text-[#666] mt-2 max-w-2xl mx-auto text-sm sm:text-base md:text-lg">
-          «Genius Cup» IQ-turniri ikki bosqichda o'tkiziladi va quyida o'tkazish vaqtlari bilan tanishing
-        </p>
+        <div className="inset-1.5 bg-white/70 backdrop-blur-xs text-center py-10">
+          <h2 className="lg:text-[45px] sm:text-3xl font-bold text-[#333]">
+            Musobaqa bosqichlari
+          </h2>
+          <p className="text-[#666] mt-2 max-w-2xl mx-auto text-sm sm:text-base md:text-lg">
+            «Genius Cup» IQ-turniri ikki bosqichda o'tkiziladi va quyida o'tkazish vaqtlari bilan tanishing
+          </p>
 
-        <div className="w-full custom-container flex flex-col gap-6 mt-10">
-          {Events.map((item) => (
-            <div
-              key={item.title}
-              className={`flex flex-col md:flex-row ${
-                item.flex === "row-reverse" ? "md:flex-row-reverse" : ""
-              } bg-white overflow-hidden`}
-            >
-              {/* Image Section */}
-              <div className="w-full md:w-1/2">
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              {/* Content Section */}
-              <div className="w-full md:w-1/2 p-4 sm:p-6 flex flex-col items-start gap-3 sm:gap-4 justify-baseline">
-                {/* Date Section */}
-                <div className="flex gap-2 sm:gap-4 items-center text-gray-500 text-xs sm:text-sm md:text-base">
-                  <span className="text-[#333] font-bold text-sm sm:text-lg md:text-2xl">
-                    {item.dateTitle}:
-                  </span>
-                  <span className="font-bold text-sm sm:text-lg md:text-2xl text-[#1E9FD9]">
-                    {item.date}
-                  </span>
+          <div className="w-full custom-container flex flex-col gap-6 mt-10">
+            {Events.map((item) => (
+              <div
+                key={item.title}
+                className={`flex flex-col gap-5 md:flex-row ${item.flex === "row-reverse" ? "md:flex-row-reverse" : ""
+                  } bg-white overflow-hidden`}
+              >
+                {/* Image Section */}
+                <div className="w-full md:w-1/2">
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
-                <p className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold text-[#333] hover:text-[#1E9FD9] transition-all ease-linear">
-  {item.status === "Online" ? "Birinchi bosqich: Online" : "Ikkinchi bosqich: Offline"}
-</p>
-
-                {/* Description */}
-                <p className="lg:w-[460px] text-[#666] text-start text-xs sm:text-sm md:text-base lg:text-[20px] mt-2">
-                  {item.desc}
-                </p>
-
-                {/* Telegram Button */}
-                <div className="mt-3 sm:mt-4 flex items-center gap-3 sm:gap-4">
-                  <a
-                    href={`https://t.me/${item.bot1.replace("@", "")}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="relative inline-block w-full py-2 px-4 text-[#1E9FD9] font-bold border-2 border-[#1E9FD9] rounded-full overflow-hidden transition-all duration-300 group"
-                  >
-                    <span className="absolute inset-0 bg-[#1E9FD9] scale-0 rounded-lg origin-center transition-transform duration-300 group-hover:scale-100"></span>
-                    <span className="relative z-10 group-hover:text-white">
-                      Telegram sahifa
+                {/* Content Section */}
+                <div className="w-full md:w-1/2 px-1.5 py-4 sm:py-6 flex flex-col items-start gap-3 sm:gap-4 justify-baseline">
+                  {/* Date Section */}
+                  <div className="flex gap-2 sm:gap-4 items-center text-gray-500 text-xs sm:text-sm md:text-base">
+                    <span className="text-[#333] font-bold text-sm sm:text-lg md:text-2xl">
+                      {item.dateTitle}:
                     </span>
-                  </a>
+                    <span className="font-bold text-sm sm:text-lg md:text-2xl text-[#1E9FD9]">
+                      {item.date}
+                    </span>
+                  </div>
+
+                  <p className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold text-[#333] hover:text-[#1E9FD9] transition-all ease-linear">
+                    {item.status === "Online" ? "Birinchi bosqich: Online" : "Ikkinchi bosqich: Offline"}
+                  </p>
+
+                  {/* Description */}
+                  <p className="lg:w-[460px] text-[#666] text-start text-xs sm:text-sm md:text-base lg:text-[20px] mt-2">
+                    {item.desc}
+                  </p>
+
+                  {/* Telegram Button */}
+                  <div className="mt-3 sm:mt-4 flex items-center gap-3 sm:gap-4">
+                    <a
+                      href={`https://t.me/${item.bot1.replace("@", "")}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="relative inline-block w-full py-2 px-4 text-[#1E9FD9] font-bold border-2 border-[#1E9FD9] rounded-full overflow-hidden transition-all duration-300 group"
+                    >
+                      <span className="absolute inset-0 bg-[#1E9FD9] scale-0 rounded-lg origin-center transition-transform duration-300 group-hover:scale-100"></span>
+                      <span className="relative z-10 group-hover:text-white">
+                        Telegram sahifa
+                      </span>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
       <section className=" px-4 py-16 lg:py-20 bg-gray-100">
-
-
         <div className="flex flex-col lg:flex-row items-center justify-between custom-container">
           {/* Text Content */}
           <div className="text-center lg:text-start mb-10 mt-10 lg:mb-16 organizers test-title">
-            <h2 className="text-3xl font-bold test-title  sm:text-4xl  text-[#333] leading-tight">
+            <h2 className="text-3xl font-bold test-title lg:text-[45px] lg:w-[350px] sm:text-4xl  text-[#333] leading-tight">
               TASHKILOTCHILAR
             </h2>
-            <p className="mt-3 text-lg sm:text-xl text-[#666] max-w-2xl mx-auto">
+            <p className="mt-3 text-lg sm:text-xl lg:w-[450px] text-[#666] max-w-2xl lg:text-[25px] mx-auto">
               Biz sizning kelajingiz uchun qo'l uzatdik , siz buni javobsiz qoldirmaysiz degan umiddamiz!
             </p>
           </div>
@@ -245,8 +240,6 @@ const Index = () => {
           <SwiperCarousel />
         </div>
       </section>
-
-
     </main>
   );
 };
