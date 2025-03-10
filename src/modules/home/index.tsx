@@ -6,7 +6,7 @@ import FourthCard from "../../assets/iq-fth.jpg"
 import EventsCard from "../../assets/image_2025-03-06_15-45-23.png"
 import SwiperCarousel from "../../components/carousel";
 import { motion } from "framer-motion";
-import { FaUser} from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Hat from "../../assets/hat.png"
@@ -56,19 +56,19 @@ const Index = () => {
   const blogs = [
     {
       date: "May 15, 2019",
-      imageSrc:NewsCard,
+      imageSrc: NewsCard,
       title: "Highlight some of the fundraising",
       author: "James Smith",
     },
     {
       date: "Jun 20, 2019",
-      imageSrc:NewsCard,
+      imageSrc: NewsCard,
       title: "Charity Law & Regulation and Social Enterprise",
       author: "James Smith",
     },
     {
       date: "Aug 25, 2019",
-      imageSrc:NewsCard,
+      imageSrc: NewsCard,
       title: "Highlight some of the fundraising",
       author: "James Smith",
     },
@@ -80,7 +80,7 @@ const Index = () => {
       grade: (
         <>
           <span className="font-bold text-[#333]">3 - 4 - 5</span> - SINF O'QUVCHILARI
-         
+
         </>),
       location: "TELEGRAM BOTLAR ORQALI ",
       date: "20-APREL",
@@ -235,46 +235,47 @@ const Index = () => {
                   } bg-white overflow-hidden`}
               >
                 {/* Image Section */}
-                <div className="w-full md:w-1/2">
-                <div className="flex items-center justify-center ">
-                <div className="border  border-[#1E9FD9] bg-white shadow-lg rounded-lg overflow-hidden py-6 px-3">
-  {/* Table */}
-  <table className=" table-auto min-h-[40vh] rounded-lg">
-    {/* Header */}
-    <thead>
-      <tr className="bg-[#48b8ec] text-white text-center font-mono font-stretch-condensed font-semibold test-title border border-[#1E9FD9] rounded-lg ">
-        <th className="py-4 px-3 text-[16px] border-r border-white">O'QITISH SANASI</th>
-        <th className="py-4 px-3 text-[16px] border-r border-white">O'TKAZILISH MANZILI</th>
-        <th className="py-4 px-3 text-[16px]">VAQTLARI</th>
-      </tr>
-    </thead>
-    {/* Body */}
-    <tbody className="rounded-lg">
-      {table_data.map((row, index) => (
-        <tr
-          key={row.id}
-          className={`border border-[#1E9FD9] ${
-            index === 1 ? "bg-blue-100  hover:bg-blue-200 transition" : "bg-white  hover:bg-blue-100 transition"
-          }`}
-        >
-          <td className="py-2 px-2 text-[#333] text-[16px] border-r lowercase  border-[#1E9FD9]">
-            <span className="text-[#666]">{row.grade}</span>
-          </td>
-          <td className="py-2 px-2 text-[#333]  lowercase  text-[16px] border-r border-[#1E9FD9]">
-            {row.location} 
-            <span className="font-semibold text-[#333]">ONLINE</span>
-          </td>
-          <td className="py-2 px-2 text-[#666]   lowercase text-[16px]">
-            <span className="font-bold text-[#333]">{row.date}</span> <br />
-            {row.time}
-          </td>
-        </tr>
-      ))}
-    </tbody>
-  </table>
-</div>
+                <div className="w-full md:w-[690px]">
+                  <div className="flex items-center justify-center ">
+                    <div className=" bg-white rounded-lg overflow-hidden py-4 px-3">
+                      {/* Table */}
+                    <div className="border border-[#1E9FD9] rounded-lg">
+                    <table className="table-fixed min-h-[40vh] rounded-lg">
+                        {/* Header */}
+                        <thead>
+                          <tr className="bg-[#48b8ec] text-white text-center font-mono font-stretch-condensed font-semibold test-title rounded-lg ">
+                            <th className="py-4 px-6 text-[16px]  font-[400] rounded-tl-lg  test-title border-white">O'QITISH SANASI</th>
+                            <th className="py-4 px-6 text-[16px]  test-title font-[400] border-white">O'TKAZILISH MANZILI</th>
+                            <th className="py-4 px-6 text-[16px] test-title rounded-tr-lg font-[400]">VAQTLARI</th>
+                          </tr>
+                        </thead>
+                        {/* Body */}
+                        <tbody>
+                          {table_data.map((row, index) => (
+                            <tr
+                              key={row.id}
+                              className={`${index === 1 ? "bg-blue-100  hover:bg-blue-200 transition" : "bg-transparent  hover:bg-blue-100 h-[50px] transition"
+                                }`}
+                            >
+                              <td className="py-2 px-6 text-[#333] text-[16px] lowercase  ">
+                                <span className="text-[#666]">{row.grade}</span>
+                              </td>
+                              <td className="py-2 px-6 text-[#333]  lowercase  text-[16px]">
+                                {row.location}
+                                <span className="font-semibold text-[#333]">ONLINE</span>
+                              </td>
+                              <td className="py-2 px-6 text-[#666]   lowercase text-[16px]">
+                                <span className="font-bold text-[#333]">{row.date}</span> <br />
+                                {row.time}
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                    </div>
 
-    </div>
+                  </div>
                 </div>
 
                 {/* Content Section */}
@@ -347,15 +348,15 @@ const Index = () => {
                     <img src={blog.imageSrc} alt={blog.title} className="w-[280px] h-[270px] object-cover " />
                     <span className="absolute top-15 rounded-[30px] -left-9 bg-indigo-900 text-white text-sm px-3 py-2">
                       {blog.date}
-                            <span className="absolute top-1/2 right-[-2px] -translate-y-1/2 w-3 h-3 bg-indigo-900 rotate-45"></span>
+                      <span className="absolute top-1/2 right-[-2px] -translate-y-1/2 w-3 h-3 bg-indigo-900 rotate-45"></span>
                     </span>
                   </div>
                   <Link to={"maqolalar"} className="mt-4 text-[22px] test-title font-semibold hover:text-[#1E9FD9] text-[#333]">{blog.title}</Link>
                   <div className="flex items-center gap-4 text-[15px] font-semibold text-[#666] mt-2">
                     <p className="flex items-center gap-1">
-                      <FaUser className=" text-[#1E9FD9] text-[19px]"/> {blog.author}
+                      <FaUser className=" text-[#1E9FD9] text-[19px]" /> {blog.author}
                     </p>
-                  
+
                   </div>
                 </div>
               ))}

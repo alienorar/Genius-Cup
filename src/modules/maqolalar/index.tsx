@@ -1,16 +1,16 @@
 
 import { useState } from "react";
-import { FaFacebookF, FaTwitter, FaPinterestP, FaLinkedinIn, FaYCombinator, FaInstagram ,FaUser, FaComment} from "react-icons/fa";
+import { FaFacebookF, FaInstagram ,FaUser} from "react-icons/fa";
 import ArticleCard from "../../assets/article-card.png"
+import { FaTelegram } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const socialIcons = [
   { icon: <FaFacebookF />, link: "#" },
-  { icon: <FaTwitter />, link: "#" },
-  { icon: <FaPinterestP />, link: "#" },
-  { icon: <FaLinkedinIn />, link: "#" },
-  { icon: <FaYCombinator />, link: "#" },
   { icon: <FaInstagram />, link: "#" },
+  {icon: <FaTelegram/>, link:"https://t.me/Genius_cup_bot"},
 ];
+
 
 const posts = [
   {
@@ -19,7 +19,6 @@ const posts = [
     title: "This is How I Relax on Lazy Sundays",
     image: ArticleCard,
     author: "Alice Johnson",
-    comments: 12,
     content: "Lorem ipsum dolor sit amet,Lorem ipsum dosectetur adipisicing elit, sed do.Lorem ipsum dolor sit amet, con lorim ectetur Nulla fringilla purus at leo dignisntum accumsan leo vel tempor. Sit amet ukmi consectetur Nulla fringillat etur adipisicing elit at leo dignissim congue",
   },
   {
@@ -28,7 +27,6 @@ const posts = [
     title: "Going Shopping in New Dress & a Hat",
     image:ArticleCard,
     author: "Michael Roberts",
-    comments: 8,
     content: "ShoppiLorem ipsum dosectetur adipisicing elit, sed do.Lorem ipsum dolor sit amet, con lorim ectetur Nulla fringilla purus at leo dignisntum accumsan leo vel tempor. Sit amet ukmi consectetur Nulla fringillat etur adipisicing elit at leo dignissim congue",
   },
   {
@@ -37,8 +35,7 @@ const posts = [
     title: "How an Island Forms in River And Stones",
     image: ArticleCard,
     author: "James Smith",
-    comments: 20,
-    content: "Did you know thaLorem ipsum dosectetur adipisicing elit, sed do.Lorem ipsum dolor sit amet, con lorim ectetur Nulla fringilla purus at leo dignisntum accumsan leo vel tempor. Sit amet ukmi consectetur Nulla fringillat etur adipisicing elit at leo dignissim congue",
+    content: "Did you know thaLorem ipsum dosectetur adipisicing elit, sed do.Lorem  ipsum dolor sit amet, con lorim ectetur Nulla fringilla purus at leo dignisntum accumsan leo vel tempor. Sit amet ukmi consectetur Nulla fringillat etur adipisicing elit at leo dignissim congue lorieiutitueruiterityrytui"
   },
 ];
 
@@ -59,9 +56,16 @@ const BlogPost = () => {
     <div className="article-banner h-[80vh]">
 
 </div>
-
+ <div>
+  <nav className="text-gray-500 text-sm flex items-center space-x-2 py-6  custom-container">
+      <span className="font-semibold text-gray-700"><Link to={"/"}> HOME</Link></span>
+      <span className="font-[800] ">{">"}</span>
+      <span className="text-[#1E9FD9]  font-semibold">OUR BLOG STYLE 4</span>
+    </nav>
+ </div>
     <div className="max-w-6xl mx-auto py-8 grid grid-cols-12 gap-6 my-[100px]  ">
       {/* Social Media Icons */}
+      
       <div className="col-span-1 flex flex-col items-center space-y-3">
         <span className="text-gray-500 text-sm">🔗 45</span>
         {socialIcons.map((item, index) => (
@@ -91,23 +95,22 @@ const BlogPost = () => {
           <div className="flex items-center text-[#666] text-sm mt-2 space-x-3">
             <FaUser className="text-[#1E9FD9]"/>
             <span>{selectedPost.author}</span>
-            <FaComment className="text-[#1E9FD9]"/>
-            <span>{selectedPost.comments}</span>
+   
           </div>
           <p className="mt-4 text-[#666] lg:text-[17px] leading-relaxed">{selectedPost.content}</p>
         </div>
       </div>
 
       {/* Recent Posts */}
-      <div className="col-span-4">
-        <h3 className="font-bold text-lg mb-4">RECENT POSTS</h3>
+      <div className="col-span-4 bg-gray-100 py-[30px] px-[20px]">
+        <h3 className="font-bold text-lg mb-4 test-title">RECENT POSTS</h3>
         {posts.map((post, index) => (
           <div key={index} className="flex items-center space-x-3 mb-4 cursor-pointer hover:bg-gray-100 p-2 rounded-lg transition"
             onClick={() => handlePostClick(post)}>
             <img src={post.image} alt={post.title} className="w-[75px] h-[75px] object-cover rounded-md bg-gray-300" />
             <div>
-              <p className="text-gray-400 text-sm">{post.date}</p>
-              <p className="text-gray-800 font-medium">{post.title}</p>
+              <p className="text-[#666] text-sm">{post.date}</p>
+              <p className="text-[#333] font-bold text-[18px]">{post.title}</p>
             </div>
           </div>
         ))}
