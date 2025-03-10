@@ -6,10 +6,13 @@ import FourthCard from "../../assets/iq-fth.jpg"
 import EventsCard from "../../assets/image_2025-03-06_15-45-23.png"
 import SwiperCarousel from "../../components/carousel";
 import { motion } from "framer-motion";
+import { FaUser, FaRegComments } from "react-icons/fa";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Hat from "../../assets/hat.png"
 import Finance from "../../assets/finance.jpg"
 import Light from "../../assets/light.png"
+import NewsCard from "../../assets/news-card.png"
 const Index = () => {
   const [animate, setAnimate] = useState(false);
 
@@ -49,6 +52,54 @@ const Index = () => {
         "ikkinchi bosqichga tavsiya etilganlar o'zlari bilan shaxslarini tasdiqlovchi hujjjatlarni belgilangan vaqtdan kechikmagan holda olib kelishi zarur!", bot1: "@Genius_cup_bot", bot2: "@Genius_cup2_bot", img: EventsCard, flex: "row-reverse"
     }
   ]
+
+  const blogs = [
+    {
+      date: "May 15, 2019",
+      imageSrc:NewsCard,
+      title: "Highlight some of the fundraising",
+      author: "James Smith",
+      comments: 20,
+    },
+    {
+      date: "Jun 20, 2019",
+      imageSrc:NewsCard,
+      title: "Charity Law & Regulation and Social Enterprise",
+      author: "James Smith",
+      comments: 25,
+    },
+    {
+      date: "Aug 25, 2019",
+      imageSrc:NewsCard,
+      title: "Highlight some of the fundraising",
+      author: "James Smith",
+      comments: 85,
+    },
+  ];
+
+  const table_data = [
+    {
+      id: 1,
+      grade: "3 - 4 - 5 - SINF O'QUVCHILARI",
+      location: "TELEGRAM BOTLAR ORQALI ",
+      date: "20-APREL",
+      time: "9:00 DAN 10:00 GA QADAR",
+    },
+    {
+      id: 2,
+      grade: "6 - 7 - 8 - SINF O'QUVCHILARI",
+      location: "TELEGRAM BOTLAR ORQALI ",
+      date: "20-APREL",
+      time: "11:00 DAN 12:00 GA QADAR",
+    },
+    {
+      id: 3,
+      grade: "9 - 10 - 11 - SINF O'QUVCHILARI HAMDA 1 - 2 - BOSQICH AKADEMIK LITSEY TALABALARI",
+      location: "TELEGRAM BOTLAR ORQALI ",
+      date: "20-APREL",
+      time: "11:00 DAN 12:00 GA QADAR",
+    },
+  ];
   return (
     <main>
       <section className="relative w-full h-[780px] overflow-hidden">
@@ -175,11 +226,45 @@ const Index = () => {
               >
                 {/* Image Section */}
                 <div className="w-full md:w-1/2">
-                  <img
-                    src={item.img}
-                    alt={item.title}
-                    className="w-full h-full object-cover"
-                  />
+                <div className="flex items-center justify-center ">
+                <div className="border border-[#1E9FD9] bg-white shadow-lg overflow-hidden">
+  {/* Table */}
+  <table className="w-full ">
+    {/* Header */}
+    <thead>
+      <tr className="bg-[#1E9FD9] text-white text-center border border-[#1E9FD9]">
+        <th className="py-4 px-3 text-[18px] border-r border-white">O'QITISH SANASI</th>
+        <th className="py-4 px-3 text-[18px] border-r border-white">O'TKAZILISH MANZILI</th>
+        <th className="py-4 px-3 text-[18px]">VAQTLARI</th>
+      </tr>
+    </thead>
+    {/* Body */}
+    <tbody>
+      {table_data.map((row, index) => (
+        <tr
+          key={row.id}
+          className={`border border-[#1E9FD9] ${
+            index === 1 ? "bg-blue-100" : "bg-white"
+          } hover:bg-blue-200 transition`}
+        >
+          <td className="py-2 px-6 text-[#333] text-[16px] border-r  lowercase  border-[#1E9FD9]">
+            <span className="font-semibold">{row.grade}</span>
+          </td>
+          <td className="py-2 px-6 text-[#333]  lowercase  text-[16px] border-r border-[#1E9FD9]">
+            {row.location} <br />
+            <span className="font-semibold text-[#333]">ONLINE</span>
+          </td>
+          <td className="py-2 px-6 text-[#666]   lowercase text-[16px]">
+            <span className="font-bold text-[#333]">{row.date}</span> <br />
+            {row.time}
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
+    </div>
                 </div>
 
                 {/* Content Section */}
@@ -238,6 +323,36 @@ const Index = () => {
 
           {/* Swiper Carousel */}
           <SwiperCarousel />
+        </div>
+      </section>
+      <section className="custom-container">
+        <div className="my-[100px]  py-10">
+          <div className="container mx-auto px-4">
+            <h1 className="lg:text-[45px] md:text-[35px] sm:text-[25px] text-[22px] font-bold text-center text-[#333] mb-1">Latest Blogs</h1>
+            <p className="lg:text-[18px] md:text-[17px] sm:text-[15px]  text-[#666] text-center mb-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, incidunt.</p>
+            <div className="flex flex-wrap justify-between items-center gap-6">
+              {blogs.map((blog, index) => (
+                <div key={index} className="w-[280px] flex flex-col py-4 justify-between mx-auto">
+                  <div className="relative ">
+                    <img src={blog.imageSrc} alt={blog.title} className="w-[280px] h-[270px] object-cover " />
+                    <span className="absolute top-15 rounded-[30px] -left-9 bg-indigo-900 text-white text-sm px-3 py-2">
+                      {blog.date}
+                            <span className="absolute top-1/2 right-[-2px] -translate-y-1/2 w-3 h-3 bg-indigo-900 rotate-45"></span>
+                    </span>
+                  </div>
+                  <Link to={"maqolalar"} className="mt-4 text-[22px] test-title font-semibold hover:text-[#1E9FD9] text-[#333]">{blog.title}</Link>
+                  <div className="flex items-center gap-4 text-[15px] font-semibold text-[#666] mt-2">
+                    <p className="flex items-center gap-1">
+                      <FaUser className=" text-[#1E9FD9] text-[19px]"/> {blog.author}
+                    </p>
+                    <p className="flex items-center gap-1">
+                      <FaRegComments className=" text-[#1E9FD9] text-[19px]" />{blog.comments}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
     </main>
