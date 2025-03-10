@@ -6,12 +6,16 @@
 
 @font-face {
     font-family: 'Rubik italic';
-    src: url('/Rubik/static/Rubik-Italic.ttf')
+    src: url('/public/fonts/Rubik/Rubik-Italic-VariableFont_wght.ttf')
 }
 
 @font-face {
     font-family: 'Rubik static';
-    src: url('/Rubik/Rubik-VariableFont_wght.ttf')
+    src: url('/public/fonts/Rubik/Rubik-VariableFont_wght.ttf')
+}
+@font-face {
+    font-family: 'Early Bird';
+    src: url('/public/fonts/early_bird/Early\ Bird.otf')
 }
 
 * {
@@ -123,11 +127,11 @@
 }
 
 .banner-desc {
-    font-family: "Rubik italic";
+    font-family: 'Rubik italic';
 }
 
 .test-title {
-    font-family: "Rubik static";
+    font-family: 'Rubik static';
 }
 
 .article-banner{

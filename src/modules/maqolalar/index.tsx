@@ -60,7 +60,7 @@ const BlogPost = () => {
 
 </div>
 
-    <div className="max-w-6xl mx-auto px-4 py-8 grid grid-cols-12 gap-6 my-10 h-[80vh] ">
+    <div className="max-w-6xl mx-auto py-8 grid grid-cols-12 gap-6 my-[100px]  ">
       {/* Social Media Icons */}
       <div className="col-span-1 flex flex-col items-center space-y-3">
         <span className="text-gray-500 text-sm">🔗 45</span>
@@ -89,9 +89,9 @@ const BlogPost = () => {
         <div className="mt-6">
           <h2 className="text-2xl font-bold">{selectedPost.title}</h2>
           <div className="flex items-center text-[#666] text-sm mt-2 space-x-3">
-            <FaUser className="text-[#1E9FD9]" />
+            <FaUser className="text-[#1E9FD9]"/>
             <span>{selectedPost.author}</span>
-            <FaComment className="text-[#1E9FD9]" />
+            <FaComment className="text-[#1E9FD9]"/>
             <span>{selectedPost.comments}</span>
           </div>
           <p className="mt-4 text-[#666] lg:text-[17px] leading-relaxed">{selectedPost.content}</p>
@@ -104,7 +104,7 @@ const BlogPost = () => {
         {posts.map((post, index) => (
           <div key={index} className="flex items-center space-x-3 mb-4 cursor-pointer hover:bg-gray-100 p-2 rounded-lg transition"
             onClick={() => handlePostClick(post)}>
-            <img src={post.image} alt={post.title} className="w-[75px] h-[75px] object-cover bg-gray-300" />
+            <img src={post.image} alt={post.title} className="w-[75px] h-[75px] object-cover rounded-md bg-gray-300" />
             <div>
               <p className="text-gray-400 text-sm">{post.date}</p>
               <p className="text-gray-800 font-medium">{post.title}</p>

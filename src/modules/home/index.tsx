@@ -6,7 +6,7 @@ import FourthCard from "../../assets/iq-fth.jpg"
 import EventsCard from "../../assets/image_2025-03-06_15-45-23.png"
 import SwiperCarousel from "../../components/carousel";
 import { motion } from "framer-motion";
-import { FaUser, FaRegComments } from "react-icons/fa";
+import { FaUser} from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Hat from "../../assets/hat.png"
@@ -59,42 +59,52 @@ const Index = () => {
       imageSrc:NewsCard,
       title: "Highlight some of the fundraising",
       author: "James Smith",
-      comments: 20,
     },
     {
       date: "Jun 20, 2019",
       imageSrc:NewsCard,
       title: "Charity Law & Regulation and Social Enterprise",
       author: "James Smith",
-      comments: 25,
     },
     {
       date: "Aug 25, 2019",
       imageSrc:NewsCard,
       title: "Highlight some of the fundraising",
       author: "James Smith",
-      comments: 85,
     },
   ];
 
   const table_data = [
     {
       id: 1,
-      grade: "3 - 4 - 5 - SINF O'QUVCHILARI",
+      grade: (
+        <>
+          <span className="font-bold text-[#333]">3 - 4 - 5</span> - SINF O'QUVCHILARI
+         
+        </>),
       location: "TELEGRAM BOTLAR ORQALI ",
       date: "20-APREL",
       time: "9:00 DAN 10:00 GA QADAR",
     },
     {
       id: 2,
-      grade: "6 - 7 - 8 - SINF O'QUVCHILARI",
+      grade: (
+        <>
+          <span className="font-bold text-[#333]">6 - 7 - 8</span> - SINF O'QUVCHILARI HAMDA <br />
+
+        </>),
       location: "TELEGRAM BOTLAR ORQALI ",
       date: "20-APREL",
       time: "11:00 DAN 12:00 GA QADAR",
     },
     {
       id: 3,
-      grade: "9 - 10 - 11 - SINF O'QUVCHILARI HAMDA 1 - 2 - BOSQICH AKADEMIK LITSEY TALABALARI",
+      grade: (
+        <>
+          <span className="font-bold text-[#333]">9 - 10 - 11</span> - SINF O'QUVCHILARI HAMDA <br />
+          <span className="font-bold text-[#333]">1 - 2</span> - BOSQICH AKADEMIK LITSEY TALABALARI
+        </>
+      ),
       location: "TELEGRAM BOTLAR ORQALI ",
       date: "20-APREL",
       time: "11:00 DAN 12:00 GA QADAR",
@@ -227,34 +237,34 @@ const Index = () => {
                 {/* Image Section */}
                 <div className="w-full md:w-1/2">
                 <div className="flex items-center justify-center ">
-                <div className="border border-[#1E9FD9] bg-white shadow-lg overflow-hidden">
+                <div className="border  border-[#1E9FD9] bg-white shadow-lg rounded-lg overflow-hidden py-6 px-3">
   {/* Table */}
-  <table className="w-full ">
+  <table className=" table-auto min-h-[40vh] rounded-lg">
     {/* Header */}
     <thead>
-      <tr className="bg-[#1E9FD9] text-white text-center border border-[#1E9FD9]">
-        <th className="py-4 px-3 text-[18px] border-r border-white">O'QITISH SANASI</th>
-        <th className="py-4 px-3 text-[18px] border-r border-white">O'TKAZILISH MANZILI</th>
-        <th className="py-4 px-3 text-[18px]">VAQTLARI</th>
+      <tr className="bg-[#48b8ec] text-white text-center font-mono font-stretch-condensed font-semibold test-title border border-[#1E9FD9] rounded-lg ">
+        <th className="py-4 px-3 text-[16px] border-r border-white">O'QITISH SANASI</th>
+        <th className="py-4 px-3 text-[16px] border-r border-white">O'TKAZILISH MANZILI</th>
+        <th className="py-4 px-3 text-[16px]">VAQTLARI</th>
       </tr>
     </thead>
     {/* Body */}
-    <tbody>
+    <tbody className="rounded-lg">
       {table_data.map((row, index) => (
         <tr
           key={row.id}
           className={`border border-[#1E9FD9] ${
-            index === 1 ? "bg-blue-100" : "bg-white"
-          } hover:bg-blue-200 transition`}
+            index === 1 ? "bg-blue-100  hover:bg-blue-200 transition" : "bg-white  hover:bg-blue-100 transition"
+          }`}
         >
-          <td className="py-2 px-6 text-[#333] text-[16px] border-r  lowercase  border-[#1E9FD9]">
-            <span className="font-semibold">{row.grade}</span>
+          <td className="py-2 px-2 text-[#333] text-[16px] border-r lowercase  border-[#1E9FD9]">
+            <span className="text-[#666]">{row.grade}</span>
           </td>
-          <td className="py-2 px-6 text-[#333]  lowercase  text-[16px] border-r border-[#1E9FD9]">
-            {row.location} <br />
+          <td className="py-2 px-2 text-[#333]  lowercase  text-[16px] border-r border-[#1E9FD9]">
+            {row.location} 
             <span className="font-semibold text-[#333]">ONLINE</span>
           </td>
-          <td className="py-2 px-6 text-[#666]   lowercase text-[16px]">
+          <td className="py-2 px-2 text-[#666]   lowercase text-[16px]">
             <span className="font-bold text-[#333]">{row.date}</span> <br />
             {row.time}
           </td>
@@ -345,9 +355,7 @@ const Index = () => {
                     <p className="flex items-center gap-1">
                       <FaUser className=" text-[#1E9FD9] text-[19px]"/> {blog.author}
                     </p>
-                    <p className="flex items-center gap-1">
-                      <FaRegComments className=" text-[#1E9FD9] text-[19px]" />{blog.comments}
-                    </p>
+                  
                   </div>
                 </div>
               ))}
