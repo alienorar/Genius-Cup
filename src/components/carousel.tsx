@@ -49,13 +49,13 @@ const SwiperCarousel: React.FC = () => {
         >
           {data.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white w-[320px] h-[280px] flex flex-col justify-evenly p-6 shadow-lg text-center">
+              <div className="bg-white w-[320px] min-h-[280px] flex flex-col justify-between p-6 shadow-lg text-center">
                 {/* Logo */}
-                <div className="flex justify-center mb-4">
+                <div className="flex justify-center items-center mb-4 gap-2 h-[80px]">
                  <a href={item.website}> <img
                     src={item.logo}
                     alt={item.organizer}
-                    className="w-16 h-16 object-contain"
+                    className="w-18 h-[80px] max-h-full object-contain"
                   /></a>
                 </div>
                 

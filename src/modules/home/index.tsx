@@ -90,7 +90,7 @@ const Index = () => {
       id: 2,
       grade: (
         <>
-          <span className="font-bold text-[#333]">6 - 7 - 8</span> - SINF O'QUVCHILARI HAMDA <br />
+          <span className="font-bold text-[#333]">6 - 7 - 8</span> - SINF O'QUVCHILARI <br />
 
         </>),
       location: "TELEGRAM BOTLAR ORQALI ",
@@ -197,7 +197,7 @@ const Index = () => {
       </section>
 
 
-      <section className=" bg-gray-100 lg:my-[120px]">
+      <section className=" bg-gray-100 lg:my-[100px]">
         <div className="custom-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  text-center py-10">
           {IqLevel.map((item) => (
             <div
@@ -219,7 +219,7 @@ const Index = () => {
         </div>
       </section>
       <section className="events">
-        <div className="inset-1.5 bg-white/70 backdrop-blur-xs text-center py-10">
+        <div className="inset-1.5 bg-white/70 backdrop-blur-xs text-center lg:py-[50px]">
           <h2 className="lg:text-[45px] sm:text-3xl font-bold text-[#333]">
             Musobaqa bosqichlari
           </h2>
@@ -231,48 +231,57 @@ const Index = () => {
             {Events.map((item) => (
               <div
                 key={item.title}
-                className={`flex flex-col gap-5 md:flex-row ${item.flex === "row-reverse" ? "md:flex-row-reverse" : ""
+                className={`flex flex-col gap-3 md:flex-row ${item.flex === "row-reverse" ? "md:flex-row-reverse" : ""
                   } bg-white overflow-hidden`}
               >
                 {/* Image Section */}
                 <div className="w-full md:w-[690px]">
                   <div className="flex items-center justify-center ">
-                    <div className=" bg-white rounded-lg overflow-hidden py-4 px-3">
+                    <div>
                       {/* Table */}
-                    <div className="border border-[#1E9FD9] rounded-lg">
-                    <table className="table-fixed min-h-[40vh] rounded-lg">
-                        {/* Header */}
-                        <thead>
-                          <tr className="bg-[#48b8ec] text-white text-center font-mono font-stretch-condensed font-semibold test-title rounded-lg ">
-                            <th className="py-4 px-6 text-[16px]  font-[400] rounded-tl-lg  test-title border-white">O'QITISH SANASI</th>
-                            <th className="py-4 px-6 text-[16px]  test-title font-[400] border-white">O'TKAZILISH MANZILI</th>
-                            <th className="py-4 px-6 text-[16px] test-title rounded-tr-lg font-[400]">VAQTLARI</th>
-                          </tr>
-                        </thead>
-                        {/* Body */}
-                        <tbody>
-                          {table_data.map((row, index) => (
-                            <tr
-                              key={row.id}
-                              className={`${index === 1 ? "bg-blue-100  hover:bg-blue-200 transition" : "bg-transparent  hover:bg-blue-100 h-[50px] transition"
-                                }`}
-                            >
-                              <td className="py-2 px-6 text-[#333] text-[16px] lowercase  ">
-                                <span className="text-[#666]">{row.grade}</span>
-                              </td>
-                              <td className="py-2 px-6 text-[#333]  lowercase  text-[16px]">
-                                {row.location}
-                                <span className="font-semibold text-[#333]">ONLINE</span>
-                              </td>
-                              <td className="py-2 px-6 text-[#666]   lowercase text-[16px]">
-                                <span className="font-bold text-[#333]">{row.date}</span> <br />
-                                {row.time}
-                              </td>
+                      <div className="border border-[#1E9FD9] rounded-lg lg:w-[611px] overflow-x-auto">
+                        <table className="h-[40vh] rounded-lg w-full border-collapse">
+                          {/* Header */}
+                          <thead>
+                            <tr className="bg-[#48b8ec]  text-white text-center font-mono font-stretch-condensed font-semibold test-title rounded-lg">
+                              <th className="py-4 px-6 h-[80px] text-[16px] font-[400] rounded-tl-lg test-title border-white">
+                                O'QITISH SANASI
+                              </th>
+                              <th className="py-4 px-6 h-[80px] text-[16px] test-title font-[400] border-white">
+                                O'TKAZILISH MANZILI
+                              </th>
+                              <th className="py-4 px-6 h-[80px] text-[16px] test-title rounded-tr-lg font-[400]">
+                                VAQTLARI
+                              </th>
                             </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
+                          </thead>
+                          {/* Body */}
+                          <tbody>
+                            {table_data.map((row, index) => (
+                              <tr
+                                key={row.id}
+                                className={`${index === 1
+                                    ? "bg-blue-100 hover:bg-blue-200 transition"
+                                    : "bg-transparent hover:bg-blue-100  transition"
+                                  }`}
+                              >
+                                <td className="px-4 text-[#333] text-[15px] lowercase">
+                                  <span className="text-[#666]">{row.grade}</span>
+                                </td>
+                                <td className=" px-4 text-[#333] text-[15px] lowercase">
+                                  {row.location}
+                                  <span className="font-semibold text-[#333]">ONLINE</span>
+                                </td>
+                                <td className=" px-4 text-[#666] lowercase text-[15px]">
+                                  <span className="font-bold text-[#333]">{row.date}</span> <br />
+                                  {row.time}
+                                </td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+
                     </div>
 
                   </div>
@@ -290,7 +299,7 @@ const Index = () => {
                     </span>
                   </div>
 
-                  <p className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold text-[#333] hover:text-[#1E9FD9] transition-all ease-linear">
+                  <p className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold text-[#1E9FD9] transition-all ease-linear">
                     {item.status === "Online" ? "Birinchi bosqich: Online" : "Ikkinchi bosqich: Offline"}
                   </p>
 
