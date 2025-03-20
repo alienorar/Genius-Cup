@@ -158,11 +158,11 @@ const Index = () => {
         </div>
       </section>
       <section className="custom-container">
-        <div className="container mx-auto px-4 py-10">
-          <h2 className="text-3xl font-bold text-center text-[#012840] mb-6">
+        <div className="container mx-auto px-4 py-10 poppin ">
+          <h2 className="text-[40px] font-bold text-center text-[#012840] pb-5 ">
             Musobaqa Bosqichlari
           </h2>
-          <p className="text-center text-[#01284099] mb-10">
+          <p className="text-center text-[#01284099] text-[20px] lg:mb-[100px] lg:w-[600px] flex items-center justify-between mx-auto">
             «Genius Cup» IQ-turniri ikki bosqichda o'tkaziladi va quyida o'tkazish
             vaqtlari bilan tanishing
           </p>
@@ -195,7 +195,7 @@ const Index = () => {
               </div>
 
               {/* Bosqich jadvali */}
-              <div className="bg-[#DCE1F899] px-6 py-4 rounded-3xl md:w-1/2">
+              <div className="bg-[#DCE1F899] px-6 py-4 rounded-3xl md:w-1/2 poppin">
                 <div className="grid grid-cols-3 gap-4 text-center font-semibold">
                   <span  className="bg-white rounded-2xl px-4 py-4">O‘tkazilish sanasi</span>
                   <span  className="bg-white rounded-2xl px-4 py-4">O‘tkazilish Manzili</span>
