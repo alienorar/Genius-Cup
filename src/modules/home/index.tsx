@@ -7,6 +7,10 @@ import Iqnd from "../../assets/iq-nd.png"
 import AverageIq from "../../assets/average-it.png"
 import KnowledgeIq from "../../assets/study-iq.png"
 import FinanceIq from "../../assets/finance-iq.png"
+import Symbol from "../../assets/symbol.png"
+import OtuLogo from "../../assets/otu-logo.png"
+import ArrowWhite from "../../assets/arrow.svg"
+import WhiteSpot from "../../assets/Ellipse 4.svg"
 
 const Index = () => {
 
@@ -60,6 +64,19 @@ const Index = () => {
     { grades: <span className="font-bold text-black block">6-7-8</span>, description: "Sinf o’quvchilari", location: <span className="font-bold text-black block">Online</span>, date: <span className="font-bold text-black block">20-aprel</span>, time: "11:00dan 12:00gacha" },
     { grades: <span className="font-bold text-black block">9-10-11</span>, description: "Sinf o’quvchilari", location: <span className="font-bold text-black block">Online</span>, date: <span className="font-bold text-black block">20-aprel</span>, time: "11:00dan 12:00gacha" },
     { grades: <span className="font-bold text-black block">1-2</span>, description: "Bosqich akademik litsey talabalari", location: <span className="font-bold text-black block">Online</span>, date: <span className="font-bold text-black block">20-aprel</span>, time: "11:00dan 12:00gacha" },
+  ];
+
+  const organizers = [
+    {
+      name: "Qashqadaryo Viloyati Hokimligi",
+      logo:Symbol,
+      link: "#",
+    },
+    {
+      name: "Osiyo Texnologiyalar Universiteti",
+      logo:OtuLogo,
+      link: "#",
+    },
   ];
 
 
@@ -157,8 +174,8 @@ const Index = () => {
           </div>
         </div>
       </section>
-      <section className="custom-container">
-        <div className="container mx-auto px-4 py-10 poppin ">
+      <section className="custom-container lg:my-[80px]">
+        <div className=" py-10 poppin ">
           <h2 className="text-[40px] font-bold text-center text-[#012840] pb-5 ">
             Musobaqa Bosqichlari
           </h2>
@@ -170,20 +187,20 @@ const Index = () => {
           {stages.map((stage, index) => (
             <div
               key={index}
-              className={`flex flex-col md:flex-row ${index % 2 === 1 ? 'md:flex-row-reverse' : ''} gap-6 items-start mt-10`}
+              className={`flex flex-col md:flex-row ${index % 2 === 1 ? 'md:flex-row-reverse' : ''} justify-between gap-10   items-start mt-[100px]`}
             >
               {/* Bosqich kartasi */}
-              <div className="py-8  bg-transparent md:w-1/2 flex flex-col gap-2 justify-between items-start">
-                <h3 className="text-[#061A40] text-[32px] md:text-3xl font-bold mt-2">{stage.title}</h3>
+              <div className="py-8  bg-transparent  flex flex-col gap-2 justify-between items-start">
+                <h3 className="text-[#061A40] text-[42px]  font-bold mt-2">{stage.title}</h3>
                 <p className="text-[#01284099] text-lg text-[18px] font-[400] poppins lg:w-[530px]">{stage.description}</p>
 
                 <div className="grid grid-cols-2 gap-[80px]  mt-6 ">
                   <div>
-                    <span className="text-xl font-bold text-[#012840]">{stage.type}</span>
-                    <p className="text-[#01284099] text-sm">O‘tish tartibi</p>
+                    <span className="text-[24px] font-bold text-[#012840]">{stage.type}</span>
+                    <p className="text-[#01284099] ">O‘tish tartibi</p>
                   </div>
                   <div>
-                    <span className="text-xl font-bold text-[#012840]">{stage.date}</span>
+                    <span className="text-[28px] font-bold text-[#012840]">{stage.date}</span>
                     <p className="text-[#01284099] text-sm">O‘tkazilish sanasi</p>
                   </div>
                 </div>
@@ -195,7 +212,7 @@ const Index = () => {
               </div>
 
               {/* Bosqich jadvali */}
-              <div className="bg-[#DCE1F899] px-6 py-4 rounded-3xl md:w-1/2 poppin">
+              <div className="bg-[#DCE1F899] px-6 py-5 rounded-3xl  poppin">
                 <div className="grid grid-cols-3 gap-4 text-center font-semibold">
                   <span  className="bg-white rounded-2xl px-4 py-4">O‘tkazilish sanasi</span>
                   <span  className="bg-white rounded-2xl px-4 py-4">O‘tkazilish Manzili</span>
@@ -214,6 +231,35 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="bg-gradient-to-tl from-blue-800 via-blue-500 to-blue-800 rounded-3xl p-10 text-white text-center custom-container ">
+       <div className="flex flex-col items-center justify-center gap-3">
+          <h2 className="text-[32px] font-semibold poppin">Tashkilotchilar</h2>
+          <p className="mt-4 text-[18px] font-[300] poppin lg:w-[600px] text-gray-50">
+            Biz sizning kelajagingiz uchun qo'l uzatdik, siz buni javobsiz
+            qoldirmaysiz degan umiddamiz!
+          </p>
+       </div>
+       <div className="flex items-center gap-[20px] px-[90px] justify-between py-5 ">
+        <img src={ArrowWhite} alt="arrow" />
+          <div className="flex justify-center gap-10 mt-6 py-2 px-5  border-dashed border-[2px] border-white  rounded-3xl">
+            {organizers.map((org, index) => (
+              <div key={index} className="bg-transparent  p-6 text-center w-64 ">
+                <img src={org.logo} alt={org.name} className="mx-auto w-16 h-16" />
+                <h3 className="mt-4 mb-2 text-lg font-medium">{org.name}</h3>
+                <button className="relative h-10  w-40 overflow-hidden border-[1px]  border-[#ffffff] text-[16px] rounded-[30px] text-[#ffffff] font-[400] poppin  transition-all duration-200 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:rounded-sm before:bg-white before:duration-300 before:ease-out hover:text-[#1E9FD9] hover:shadow-white hover:before:h-40 hover:before:w-40 ">
+                  <a href="https://t.me/Genius_cup_bot" target="_blank" rel="noopener noreferrer" className="relative z-10">
+                    Rasmiy sahifa ↗
+                  </a>
+                </button>
+              </div>
+            ))}
+          </div>
+          <div className="w-[140px]">
+            <img src={WhiteSpot} alt="white spot" />
+        </div>
+       </div>
+        
+      </section>
 
 
     </main>
