@@ -189,7 +189,7 @@ const Index = () => {
               key={index}
               className={`flex flex-col md:flex-row ${index % 2 === 1 ? 'md:flex-row-reverse' : ''} justify-between gap-10   items-start mt-[100px]`}
             >
-              {/* Bosqich kartasi */}
+              {/* Step table */}
               <div className="py-8  bg-transparent  flex flex-col gap-2 justify-between items-start">
                 <h3 className="text-[#061A40] text-[42px]  font-bold mt-2">{stage.title}</h3>
                 <p className="text-[#01284099] text-lg text-[18px] font-[400] poppins lg:w-[530px]">{stage.description}</p>
@@ -211,7 +211,7 @@ const Index = () => {
                 </button>
               </div>
 
-              {/* Bosqich jadvali */}
+              {/* Step table */}
               <div className="bg-[#DCE1F899] px-6 py-5 rounded-3xl  poppin">
                 <div className="grid grid-cols-3 gap-4 text-center font-semibold">
                   <span  className="bg-white rounded-2xl px-4 py-4">O‘tkazilish sanasi</span>
@@ -231,7 +231,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="bg-gradient-to-tl from-blue-800 via-blue-500 to-blue-800 rounded-3xl p-10 text-white text-center custom-container ">
+      <section className="bg-gradient-to-tl from-blue-800 via-blue-500 to-blue-800 rounded-4xl p-10 text-white text-center custom-container ">
        <div className="flex flex-col items-center justify-center gap-3">
           <h2 className="text-[32px] font-semibold poppin">Tashkilotchilar</h2>
           <p className="mt-4 text-[18px] font-[300] poppin lg:w-[600px] text-gray-50">
@@ -255,12 +255,28 @@ const Index = () => {
             ))}
           </div>
           <div className="w-[140px]">
-            <img src={WhiteSpot} alt="white spot" />
+            <img src={WhiteSpot} alt="white spot"/>
         </div>
        </div>
         
       </section>
-
+<section className="custom-container">
+    <div className="flex justify-between items-center py-4">
+        <div>
+            <h2 className="text-3xl font-bold text-gray-900">So’nggi Yangiliklar</h2>
+            <p className="text-gray-600 mt-2">
+              «Genius Cup» IQ-turniri ikki bosqichda o‘tkaziladi va quyida o‘tkazish
+              vaqtlari bilan tanishing
+            </p>
+        </div>
+          <button className="relative h-12 w-40 overflow-hidden border bg-gradient-to-br rounded-[30px] from-sky-600 to-blue-800 text-white transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-40">
+            <a href="maqolalar"  rel="noopener noreferrer" className="relative z-10">
+              Barchasini ko'rish
+            </a>
+          </button>
+    </div>
+      
+</section>
 
     </main>
   )
