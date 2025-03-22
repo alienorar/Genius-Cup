@@ -11,6 +11,7 @@ import Symbol from "../../assets/symbol.png"
 import OtuLogo from "../../assets/otu-logo.png"
 import ArrowWhite from "../../assets/arrow.svg"
 import WhiteSpot from "../../assets/Ellipse 4.svg"
+import NewsSection from "../maqolalar"
 
 const Index = () => {
 
@@ -81,7 +82,7 @@ const Index = () => {
 
 
   return (
-    <main>
+    <main className="flex flex-col gap-[80px]">
       <section className="custom-container">
         <div className="flex flex-col justify-center items-center gap-[20px] pt-[60px]">
           <div>
@@ -93,7 +94,7 @@ const Index = () => {
             <h1 className="poppin text-[56px] text-center font-bold text-black">"Aql va zakovat sinovidan o‘tib, kelajak yetakchilariga aylaning!"</h1>
             <div className=" flex items-end px-[40px] justify-around ">
               <img src={Arrow} alt="arrow icon" />
-              <p className=" text-[#00000099] text-lg text-[22px] font-[400] text-center poppins">Bilimingizni sinang, mantiqiy fikrlash qobiliyatingizni oshiring va kelajak yetakchilari qatoridan joy oling!
+              <p className=" text-[#01284099] text-lg text-[22px] font-[400] text-center poppins">Bilimingizni sinang, mantiqiy fikrlash qobiliyatingizni oshiring va kelajak yetakchilari qatoridan joy oling!
                 Intellektual sinovlar orqali o‘z imkoniyatlaringizni kashf eting!</p>
               <img src={BlueSpot} alt="Blue spot" />
             </div>
@@ -142,7 +143,7 @@ const Index = () => {
           
         </div>
       </section>
-      <section className="bg-[#F7FAFF] py-16 " >
+      <section className="bg-[#F7FAFF] py-10 " >
         <div className="custom-container poppin">
           <div className=" text-center">
             {/* Section Title */}
@@ -174,7 +175,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-      <section className="custom-container lg:my-[80px]">
+      <section className="custom-container ">
         <div className=" py-10 poppin ">
           <h2 className="text-[40px] font-bold text-center text-[#012840] pb-5 ">
             Musobaqa Bosqichlari
@@ -231,40 +232,42 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="bg-gradient-to-tl from-blue-800 via-blue-500 to-blue-800 rounded-4xl p-10 text-white text-center custom-container ">
-       <div className="flex flex-col items-center justify-center gap-3">
-          <h2 className="text-[32px] font-semibold poppin">Tashkilotchilar</h2>
-          <p className="mt-4 text-[18px] font-[300] poppin lg:w-[600px] text-gray-50">
-            Biz sizning kelajagingiz uchun qo'l uzatdik, siz buni javobsiz
-            qoldirmaysiz degan umiddamiz!
-          </p>
-       </div>
-       <div className="flex items-center gap-[20px] px-[90px] justify-between py-5 ">
-        <img src={ArrowWhite} alt="arrow" />
-          <div className="flex justify-center gap-10 mt-6 py-2 px-5  border-dashed border-[2px] border-white  rounded-3xl">
-            {organizers.map((org, index) => (
-              <div key={index} className="bg-transparent  p-6 text-center w-64 ">
-                <img src={org.logo} alt={org.name} className="mx-auto w-16 h-16" />
-                <h3 className="mt-4 mb-2 text-lg font-medium">{org.name}</h3>
-                <button className="relative h-10  w-40 overflow-hidden border-[1px]  border-[#ffffff] text-[16px] rounded-[30px] text-[#ffffff] font-[400] poppin  transition-all duration-200 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:rounded-sm before:bg-white before:duration-300 before:ease-out hover:text-[#1E9FD9] hover:shadow-white hover:before:h-40 hover:before:w-40 ">
-                  <a href="https://t.me/Genius_cup_bot" target="_blank" rel="noopener noreferrer" className="relative z-10">
-                    Rasmiy sahifa ↗
-                  </a>
-                </button>
-              </div>
-            ))}
+    <section className="custom-container">
+        <div className="bg-gradient-to-tl from-blue-800 via-blue-500 to-blue-800 rounded-4xl  text-white text-center  py-10 custom-container">
+          <div className="flex flex-col items-center justify-center gap-2">
+            <h2 className="text-[32px] font-semibold poppin">Tashkilotchilar</h2>
+            <p className=" text-[18px] font-[300] poppin lg:w-[600px] text-gray-50">
+              Biz sizning kelajagingiz uchun qo'l uzatdik, siz buni javobsiz
+              qoldirmaysiz degan umiddamiz!
+            </p>
           </div>
-          <div className="w-[140px]">
-            <img src={WhiteSpot} alt="white spot"/>
+          <div className="flex items-center  justify-between py-5 ">
+            <img src={ArrowWhite} alt="arrow" />
+            <div className="flex justify-center gap-10 mt-6 py-2 px-5  border-dashed border-[2px] border-white  rounded-3xl">
+              {organizers.map((org, index) => (
+                <div key={index} className="bg-transparent  p-6 text-center w-64 ">
+                  <img src={org.logo} alt={org.name} className="mx-auto w-16 h-16" />
+                  <h3 className="mt-4 mb-2 text-lg font-medium">{org.name}</h3>
+                  <button className="relative h-10  w-40 overflow-hidden border-[1px]  border-[#ffffff] text-[16px] rounded-[30px] text-[#ffffff] font-[400] poppin  transition-all duration-200 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:m-auto before:h-0 before:w-0 before:rounded-sm before:bg-white before:duration-300 before:ease-out hover:text-[#1E9FD9] hover:shadow-white hover:before:h-40 hover:before:w-40 ">
+                    <a href="https://t.me/Genius_cup_bot" target="_blank" rel="noopener noreferrer" className="relative z-10">
+                      Rasmiy sahifa ↗
+                    </a>
+                  </button>
+                </div>
+              ))}
+            </div>
+            <div className="w-[140px]">
+              <img src={WhiteSpot} alt="white spot" />
+            </div>
+          </div>
+
         </div>
-       </div>
-        
-      </section>
+    </section>
 <section className="custom-container">
     <div className="flex justify-between items-center py-4">
         <div>
-            <h2 className="text-3xl font-bold text-gray-900">So’nggi Yangiliklar</h2>
-            <p className="text-gray-600 mt-2">
+            <h2 className="text-[32px] font-semibold poppin">So’nggi Yangiliklar</h2>
+            <p className="text-[18px] font-[300] poppin lg:w-[600px] text-[#01284099]">
               «Genius Cup» IQ-turniri ikki bosqichda o‘tkaziladi va quyida o‘tkazish
               vaqtlari bilan tanishing
             </p>
@@ -275,7 +278,7 @@ const Index = () => {
             </a>
           </button>
     </div>
-      
+      <NewsSection/>
 </section>
 
     </main>

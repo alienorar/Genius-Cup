@@ -8,7 +8,7 @@ const newsData = [
     description:
       "Design Analysis & Evaluation Introduction to API Design Analysis & Evaluation Introduction to API",
     image:NewsSt,
-    link: "#",
+    link: "maqolalar",
   },
   {
     date: "May 15, 2024",
@@ -16,7 +16,7 @@ const newsData = [
     description:
       "Design Analysis & Evaluation Introduction to API Design Analysis & Evaluation Introduction to API",
     image:NewsNd,
-    link: "#",
+    link: "maqolalar",
   },
   {
     date: "May 15, 2024",
@@ -24,27 +24,27 @@ const newsData = [
     description:
       "Design Analysis & Evaluation Introduction to API Design Analysis & Evaluation Introduction to API",
     image: NewsRd,
-    link: "#",
+    link: "maqolalar",
   },
 ];
 
 const NewsSection: React.FC = () => {
   return (
-    <section className="max-w-6xl mx-auto my-10 px-5">
+    <section>
       <div className="grid md:grid-cols-3 gap-6 mt-6">
         {newsData.map((news, index) => (
-          <div key={index} className="bg-transparent border border-gray-200 rounded-2xl p-4">
+          <div key={index} className="">
             <img
               src={news.image}
               alt={news.title}
-              className="w-full h-52 object-cover rounded-xl"
+              className="w-full h-[300px] object-cover rounded-xl"
             />
-            <p className="text-sm text-gray-500 mt-3">{news.date}</p>
-            <h3 className="text-lg font-semibold mt-2">{news.title}</h3>
-            <p className="text-gray-600 text-sm mt-1">{news.description}</p>
+            <p className="text-[#01284099] text-[17px]  mt-3">{news.date}</p>
+            <h3 className="text-[#061A40] lg:text-[24px] md:text-[22px] text-[20px] font-bold ">{news.title}</h3>
+            <p className="text-[#01284099] text-[17px]  mt-1">{news.description}</p>
             <a
               href={news.link}
-              className="text-blue-600 font-medium mt-3 inline-block"
+              className="text-[#012840] font-medium text-[18px] mt-3 inline-block"
             >
               Read More →
             </a>
